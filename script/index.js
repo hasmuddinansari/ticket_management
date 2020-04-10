@@ -19,7 +19,7 @@ append_card_to_dom(movies)
 function generate_card(curr_movie) {
     // curr_movie is an object which property will helps to make card
     let card = document.createElement("div")
-    card.className = "col-12 col-md-6 col-lg-4 p-2 bg-light"
+    card.className = "col-lg-4 col-md-6 col-12  p-2 bg-light"
     card.innerHTML = `<div class="card p-1 " >
                             <img id="movie_picture" src=${curr_movie.img} class="card-img-top">
                         <div class="card-body">

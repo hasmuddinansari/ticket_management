@@ -12,6 +12,11 @@ h3:hover {
     height: 400px;
     width: auto;
 }
+#small_img {
+    height:300px;
+    width: auto;
+}
+
 
 .seat {
     width: auto;

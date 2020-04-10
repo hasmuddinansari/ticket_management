@@ -100,17 +100,13 @@ function payment(price) {
     if (price > 0) {
         window.location = "Booking_confirm.html"
         let select_seat = JSON.parse(localStorage.getItem("select_movie")) || []
-        let ticket_history = JSON.parse(localStorage.getItem("ticket_history")) || []
-        ticket_history.push({ "selected_seat": select_seat, "price": price, "movie": curr_movie })
-
-        localStorage.setItem("ticket_history", JSON.stringify(ticket_history))
+        localStorage.setItem("confirmation", JSON.stringify({ "selected_seat": select_seat, "price": price, "movie": curr_movie }))
     }
     else {
         alert("Please select any seat")
     }
 
 }
-
 curr_movie_book.appendChild(movie_info(curr_movie))
 curr_movie_book.appendChild(seat_arrange(curr_movie))
 selected_seat_color()
