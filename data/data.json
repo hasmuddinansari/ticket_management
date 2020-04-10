@@ -20,7 +20,9 @@
             "seat7": true,
             "seat8": true,
             "seat9": true,
-            "seat10": true
+            "seat10": true,
+            "seat11": true,
+            "seat12": true
         },
         "timing": {
             "to": "12:30",
@@ -48,7 +50,9 @@
             "seat7": true,
             "seat8": true,
             "seat9": true,
-            "seat10": true
+            "seat10": true,
+            "seat11": true,
+            "seat12": true
         },
         "timing": {
             "to": "12:30",
@@ -74,7 +78,9 @@
             "seat7": true,
             "seat8": true,
             "seat9": true,
-            "seat10": true
+            "seat10": true,
+            "seat11": true,
+            "seat12": true
         },
         "timing": {
             "to": "12:30",
@@ -101,7 +107,9 @@
             "seat7": true,
             "seat8": true,
             "seat9": true,
-            "seat10": true
+            "seat10": true,
+            "seat11": true,
+            "seat12": true
         },
         "timing": {
             "to": "12:30",
@@ -127,7 +135,9 @@
             "seat7": true,
             "seat8": true,
             "seat9": true,
-            "seat10": true
+            "seat10": true,
+            "seat11": true,
+            "seat12": true
         },
         "timing": {
             "to": "12:30",
@@ -155,7 +165,9 @@
             "seat7": true,
             "seat8": true,
             "seat9": true,
-            "seat10": true
+            "seat10": true,
+            "seat11": true,
+            "seat12": true
         },
         "timing": {
             "to": "12:30",

@@ -1,3 +1,8 @@
+//reseting every time of current movie  selected 
+localStorage.removeItem("select_movie")
+localStorage.removeItem("movie_id")
+
+
 // place where movies list going to display
 let movies_list = document.getElementById("movies_list")
 
@@ -25,7 +30,7 @@ function generate_card(curr_movie) {
                                         ${curr_movie.locations.map(e => { return e })}
                                     </li>
                                 </ul>  
-                            <button class="btn btn-success my-3" id=${curr_movie.id}>Proccess</button>
+                            <button onclick="book_ticket()" class="btn btn-success my-3" id=${curr_movie.id}>Proccess</button>
                         </div>
                     </div>`
     return card
@@ -41,6 +46,13 @@ function append_card_to_dom(movies) {
     })
 }
 
+//select movie to book sit
+
+function book_ticket() {
+    let selected_movie = event.target.id
+    localStorage.setItem("movie_id", selected_movie)
+    window.location = "book_seat.html"
+}
 
 
 
