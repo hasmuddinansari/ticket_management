@@ -1,0 +1,165 @@
+[
+    {
+        "id": 1001,
+        "name": "83",
+        "img": "https://upload.wikimedia.org/wikipedia/en/thumb/6/69/83_film_poster.jpg/220px-83_film_poster.jpg",
+        "price": 350,
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus alias commodi quaerat ex omnis animi quis laudantium quod placeat. Quod nesciunt autem veritatis exercitationem dolores voluptate laboriosam error optio?",
+        "locations": [
+            "Patna",
+            "Banglore",
+            "New Delhi"
+        ],
+        "availablity": {
+            "seat1": true,
+            "seat2": true,
+            "seat3": true,
+            "seat4": true,
+            "seat5": true,
+            "seat6": true,
+            "seat7": true,
+            "seat8": true,
+            "seat9": true,
+            "seat10": true
+        },
+        "timing": {
+            "to": "12:30",
+            "from": "9:30"
+        }
+    },
+    {
+        "id": 1002,
+        "name": "The Green Knight Poster",
+        "locations": [
+            "Mumbai",
+            "Banglore",
+            "New Delhi"
+        ],
+        "price": 300,
+        "img": "https://upload.wikimedia.org/wikipedia/en/0/09/The_Green_Knight_poster.jpeg",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus alias commodi quaerat ex omnis animi quis laudantium quod placeat. Quod nesciunt autem veritatis exercitationem dolores voluptate laboriosam error optio?",
+        "availablity": {
+            "seat1": true,
+            "seat2": true,
+            "seat3": true,
+            "seat4": true,
+            "seat5": true,
+            "seat6": true,
+            "seat7": true,
+            "seat8": true,
+            "seat9": true,
+            "seat10": true
+        },
+        "timing": {
+            "to": "12:30",
+            "from": "9:30"
+        }
+    },
+    {
+        "id": 1003,
+        "name": "Panipat",
+        "locations": [
+            "Patna"
+        ],
+        "price": 200,
+        "img": "https://upload.wikimedia.org/wikipedia/en/5/54/Panipat_%28film%29_poster.jpg",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus alias commodi quaerat ex omnis animi quis laudantium quod placeat. Quod nesciunt autem veritatis exercitationem dolores voluptate laboriosam error optio?",
+        "availablity": {
+            "seat1": true,
+            "seat2": true,
+            "seat3": true,
+            "seat4": true,
+            "seat5": true,
+            "seat6": true,
+            "seat7": true,
+            "seat8": true,
+            "seat9": true,
+            "seat10": true
+        },
+        "timing": {
+            "to": "12:30",
+            "from": "9:30"
+        }
+    },
+    {
+        "id": 1004,
+        "name": "300",
+        "price": 500,
+        "locations": [
+            "Banglore",
+            "New Delhi"
+        ],
+        "img": "https://in.bmscdn.com/iedb/movies/images/mobile/thumbnail/large/300-et00000911-24-03-2017-20-09-49.jpg",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus alias commodi quaerat ex omnis animi quis laudantium quod placeat. Quod nesciunt autem veritatis exercitationem dolores voluptate laboriosam error optio?",
+        "availablity": {
+            "seat1": true,
+            "seat2": true,
+            "seat3": true,
+            "seat4": true,
+            "seat5": true,
+            "seat6": true,
+            "seat7": true,
+            "seat8": true,
+            "seat9": true,
+            "seat10": true
+        },
+        "timing": {
+            "to": "12:30",
+            "from": "9:30"
+        }
+    },
+    {
+        "id": 1005,
+        "name": "Harry Potter",
+        "price": 400,
+        "locations": [
+            "New Delhi"
+        ],
+        "img": "https://upload.wikimedia.org/wikipedia/en/d/df/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2.jpg",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus alias commodi quaerat ex omnis animi quis laudantium quod placeat. Quod nesciunt autem veritatis exercitationem dolores voluptate laboriosam error optio?",
+        "availablity": {
+            "seat1": true,
+            "seat2": true,
+            "seat3": true,
+            "seat4": true,
+            "seat5": true,
+            "seat6": true,
+            "seat7": true,
+            "seat8": true,
+            "seat9": true,
+            "seat10": true
+        },
+        "timing": {
+            "to": "12:30",
+            "from": "9:30"
+        }
+    },
+    {
+        "id": 1006,
+        "name": "The Amazing Spider Man",
+        "locations": [
+            "Banglore",
+            "New Delhi",
+            "Mumbai"
+        ],
+        "price": 360,
+        "img": "https://miro.medium.com/max/4050/1*gjIsgVxqtJgTrvpHvUMp_w.jpeg",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem possimus alias commodi quaerat ex omnis animi quis laudantium quod placeat. Quod nesciunt autem veritatis exercitationem dolores voluptate laboriosam error optio?",
+        "availablity": {
+            "seat1": true,
+            "seat2": true,
+            "seat3": true,
+            "seat4": true,
+            "seat5": true,
+            "seat6": true,
+            "seat7": true,
+            "seat8": true,
+            "seat9": true,
+            "seat10": true
+        },
+        "timing": {
+            "to": "12:30",
+            "from": "9:30"
+        }
+    }
+]
