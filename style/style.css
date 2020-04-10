@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 h3 {
     font-family: 'Girassol', cursive;
 }
+h3:hover {
+    cursor: pointer;
+}
+
 #movie_picture {
     height: 400px;
     width: auto;
 }
 
-#seat {
+.seat {
     width: auto;
     height: 8rem;
+    margin-top:1rem;
+}
+
+.seat:hover {
+    cursor: pointer;
+}
+
+h5 {
+    font-family: 'Lobster', cursive;
 }
