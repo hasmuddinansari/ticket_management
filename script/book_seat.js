@@ -38,7 +38,7 @@ function seat_arrange(movie) {
     let select_movie = JSON.parse(localStorage.getItem("select_movie")) || []
     card.className = "col-12 col-md-6 col-lg-8 bg-light my-1"
     card.innerHTML = `<div class="row border p-2 justify-content-center" >
-                              ${Object.keys(movie.availablity).map(name => { return `<img onclick="select_seat()" title=${name} name=${name} class="${name} seat" src="pictures/cinema-seat.svg">` })}</div>
+                              ${Object.keys(movie.availablity).map(name => { return `<img title=${name} name=${name} class="${name} seat" src="pictures/cinema-seat.svg">` })}</div>
                                 <div class=" bg-light border border-dark shadow-lg my-2">
                                 <div class="p-1">
                                     <div class="">
@@ -64,7 +64,6 @@ function selected_seat_color() {
     let i = 0
     if (set.length !== 0) {
         while (i <= 11) {
-            console.log(all_seats[i].className)
             if (set.includes(all_seats[i].className)) {
                 all_seats[i].style.backgroundColor = 'green'
             }
@@ -105,11 +104,36 @@ function payment(price) {
     else {
         alert("Please select any seat")
     }
-
 }
+
+
+function already_booked_seats() {
+    let all_seats = document.getElementsByClassName("seat")
+    let booked_seat = Object.values(curr_movie["availablity"])
+    console.log(booked_seat)
+    let i = 0
+    while (i < booked_seat.length) {
+        if (booked_seat[i] == false) {
+            all_seats[i].style.backgroundColor = "grey"
+            all_seats[i].disabled = true;
+            all_seats[i].style.cursor = "unset"
+            all_seats[i].addEventListener("click", () => {
+                alert("already booked")
+            })
+        }
+        else {
+            all_seats[i].addEventListener("click", select_seat)
+
+        }
+        i += 1
+    }
+}
+
 curr_movie_book.appendChild(movie_info(curr_movie))
 curr_movie_book.appendChild(seat_arrange(curr_movie))
 selected_seat_color()
+already_booked_seats()
+
 
 
 

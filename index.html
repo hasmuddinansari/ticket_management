@@ -16,6 +16,33 @@
     <!-- Navbar -->
     <div class="nav navbar bg-dark text-white">
         <h3 class="nav-item">BookMyMovies</h3>
+        <div class="nav-item">
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseNav" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    =
+                </a>
+            </p>
+            <div class="nav-item collapse" id="collapseNav">
+                <select class="custom-select my-1" name="language" id="language">
+                    <option selected value="All">All</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                </select>
+                <select class="custom-select my-1" name="genre" id="genre">
+                    <option selected value="All">All</option>
+                    <option value="Action">Action</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="History">History</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Sport">Sport</option>
+                    <option value="War">War</option>
+                </select>
+                <button onclick="search_movie()" class="btn btn-outline-info my-1">Search</button>
+            </div>
+        </div>
     </div>
 
     <!-- movies list -->
@@ -26,11 +53,18 @@
     </div>
 
 
-
-
-
     <script src="data/load_data.js"> </script>
     <script src="script/index.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>

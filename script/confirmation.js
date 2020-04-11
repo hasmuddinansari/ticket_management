@@ -12,7 +12,7 @@ function home() {
 }
 
 
-//confirm to book function is for just showing user to your completion is done.
+//confirmation to book function is for just showing user to your completion is done.
 
 function confirm_to_book(confirm_data) {
     let confirm_card = document.createElement("div")
@@ -48,7 +48,7 @@ function timer() {
         confirm.appendChild(circle_div)
         if (counter == 0) {
             clearInterval(timer)
-
+            modifying_data()
             //after the completetion returning to homepage
             window.location = "index.html"
         }
@@ -61,20 +61,33 @@ function modifying_data() {
     //collecting all booked history.
     localStorage.setItem("booked_history", JSON.stringify(booked_history))
 
-    let seats = confirm_data.selected_seat
+    let seats = confirm_data.selected_seat.map(s => {
+        return s.slice(0, 6).trim()
+    })
     let cur_movie_id = confirm_data.movie.id
     //getting allmovies to modify
 
-    let movies = JSON.parse(localStorage.getItem("movies"))
+    let movies = JSON.parse(localStorage.getItem("movies")) || []
     let remains = movies.filter(movie => {
         return movie.id !== cur_movie_id
     })
     let current_modify = movies.find(movie => {
         return movie.id == cur_movie_id
     })
+    console.log(movies)
+    console.log(remains)
+    console.log(current_modify)
+    seats.forEach(s => {
+        current_modify["availablity"] = {
+            ...current_modify["availablity"],
+            [s]: false
+        }
+    })
+    remains.push(current_modify)
+    localStorage.setItem("movies", JSON.stringify(remains))
+
 }
 
-modifying_data()
 
 
 
