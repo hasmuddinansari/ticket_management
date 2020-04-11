@@ -1,6 +1,8 @@
-//reseting every time of current movie  selected 
+//reseting every time of of localstorage key when that keys not needed 
 localStorage.removeItem("select_movie")
 localStorage.removeItem("movie_id")
+localStorage.removeItem("confirmation")
+localStorage.removeItem("curr_movie")
 
 
 // place where movies list going to display
@@ -62,14 +64,16 @@ function generate_card(curr_movie) {
     card.innerHTML = `<div class="card p-1 " >
                             <img id="movie_picture" src=${curr_movie.img} class="card-img-top">
                         <div class="card-body">
-                                <h5 class="card-title">${curr_movie.name}</h5>
+                                <h5 class="card-title text-info">${curr_movie.name}</h5>
                                 <p class="card-text">${curr_movie.desc}</p>
                                 <ul class="list-group"> 
+                                 <h3> Locations: </h3>
                                     <li class="list-group-item">
                                         ${curr_movie.locations.map(e => { return e })}
                                     </li>
                                 </ul>  
-                            <button onclick="book_ticket()" class="btn btn-success my-3" id=${curr_movie.id}>Proccess</button>
+                            <h5 class="m-1">Show Time : ${curr_movie.timing.from}-${curr_movie.timing.to} </h5>
+                            <button onclick="book_ticket()" class="btn btn-success my-3" id=${curr_movie.id}>Select</button>
                         </div>
                     </div>`
     return card
@@ -121,14 +125,11 @@ async function city_filter(curr_city) {
 async function getCity(city) {
     if (city) {
         let curr_address_info = city.slice(11).split(",").map(e => e.split(":"))
-        console.log(curr_address_info[2][1])
-        // console.log(cur)
         curr_city = curr_address_info[2][1].slice(1, curr_address_info[2][1].length - 1)
         console.log("loading....")
         if (curr_city) {
             let city_wise_movie = await city_filter(curr_city)
-            console.log(city_wise_movie, "solved")
-
+            console.log(city_wise_movie, "fetched")
             document.title = `${city_wise_movie.length} Movies Found in ${curr_city} `
             movies_list.innerHTML = ""
             append_card_to_dom(city_wise_movie)
@@ -138,6 +139,12 @@ async function getCity(city) {
 getLocation(getCity)
 
 
+
+
+//get ticket reciept 
+function get_your_ticket() {
+    window.location = "ticket_receipt.html"
+}
 
 
 
