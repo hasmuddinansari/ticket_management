@@ -46,6 +46,7 @@ function search_movie() {
     }
     else {
         document.title = `Current Movies`
+        document.getElementById("msg").innerHTML = ""
         append_card_to_dom(filtered)
     }
 
@@ -132,6 +133,7 @@ async function getCity(city) {
             console.log(city_wise_movie, "fetched")
             document.title = `${city_wise_movie.length} Movies Found in ${curr_city} `
             movies_list.innerHTML = ""
+            document.getElementById("msg").innerHTML = `<h3 class="text-center border"> ${city_wise_movie.length} Movies Founds in ${curr_city}  </h3>`
             append_card_to_dom(city_wise_movie)
         }
     }

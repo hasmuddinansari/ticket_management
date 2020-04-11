@@ -99,7 +99,7 @@ function payment(price) {
     if (price > 0) {
         window.location = "Booking_confirm.html"
         let select_seat = JSON.parse(localStorage.getItem("select_movie")) || []
-        localStorage.setItem("confirmation", JSON.stringify({ "selected_seat": select_seat, "price": price, "movie": curr_movie }))
+        localStorage.setItem("confirmation", JSON.stringify({ "selected_seat": select_seat, "price": price, "movie": curr_movie, "t_id": Math.floor(Math.random() * 34567876) }))
     }
     else {
         alert("Please select any seat")

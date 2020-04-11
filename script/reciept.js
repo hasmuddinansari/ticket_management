@@ -8,7 +8,7 @@ let reciept = document.getElementById("reciept")
 
 let booked_history = JSON.parse(localStorage.getItem("booked_history")) || []
 
-function tickets(ticket) {
+function tickets(ticket, index) {
     let ticket_card = document.createElement("div")
     ticket_card.className = "col-sm-12 col-md-6 col-lg-4"
     ticket_card.innerHTML =
@@ -20,11 +20,11 @@ function tickets(ticket) {
                         ${ticket.selected_seat.map(seat => {
             return `<span class="p-2 my-1"> ${seat.slice(0, 6).trim()} </span>`
         })}         </div>
-                    <h5 class="my-2"> Transaction id : ${Math.floor(Math.random() * 34567876)}</h5>
+                    <h5 class="my-2"> Transaction id : ${ticket.t_id}</h5>
                     <h4 class="my-2">Per Ticket Price : ${ticket.movie.price}</h4>
                     <h4>Paid : ${ticket.price}</h4>
 
-                    <button onclick="cancel_ticket(${ticket.movie.id})" class="btn btn-danger">Cancel Ticket</button>
+                    <button value=${ticket.t_id} id=${index} onclick="cancel_ticket(${ticket.movie.id})" class="btn btn-danger">Cancel Ticket</button>
                     </div >
                 </div > `
     return ticket_card
@@ -35,8 +35,8 @@ if (booked_history.length == 0) {
 }
 
 else {
-    booked_history.map(movie => {
-        reciept.appendChild(tickets(movie))
+    booked_history.map((movie, index) => {
+        reciept.appendChild(tickets(movie, index))
     })
 }
 
@@ -44,13 +44,7 @@ function cancel_ticket(ticket_id) {
     let confirmation = confirm("Are you Sure?")
     if (confirmation) {
         let curr_cancel_ticket = booked_history.find(ticket => {
-            return ticket.movie.id == ticket_id
-        })
-        let get_curr_index;
-        booked_history.forEach((e, i) => {
-            if (e.movie.id == ticket_id) {
-                get_curr_index = i
-            }
+            return ticket.t_id == event.target.value
         })
         let seats = curr_cancel_ticket.selected_seat.map(e => e.slice(0, 6).trim())
         let movies = JSON.parse(localStorage.getItem("movies"))
@@ -66,11 +60,12 @@ function cancel_ticket(ticket_id) {
                 [seat]: true
             }
         })
-        booked_history.splice(get_curr_index, 1)
+        booked_history.splice(event.target.id, 1)
         localStorage.setItem("booked_history", JSON.stringify(booked_history))
         without_curr_movies.push(modify_ticket)
         localStorage.setItem("movies", JSON.stringify(without_curr_movies))
         window.location.reload(true)
+
     }
     else {
         alert("Your ticket is safe..")
